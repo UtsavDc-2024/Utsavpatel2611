@@ -1,107 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
 	Name: Utsav Patel
-	File: Assignment 3 Part 1.html
-	Date: 17 october 2024
-	A biography, which has been styled using CSS
+	File: Assignment 4 Part 1.html
+	Date: 25 November 2024
+	A very brief description: Silly Story Generator project
 	-->
-
-<html lang="en">
+<html lang="en-US">
   <head>
+    <script src="main.js"></script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Formatting a biography</title>
+
+    <title>Silly story generator</title>
+
     <style>
-          body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-        }
+      body {
+        font-family: helvetica, sans-serif;
+        width: 350px;
+      }
 
-        h1 {
-            color: hotpink;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
+      label {
+        font-weight: bold;
+      }
 
-        h1::after {
-            content: "";
-            display: block;
-            border-bottom: 10px dotted purple;
-            width: 100%;
-            margin-top: 10px;
-        }
+      div {
+        padding-bottom: 20px;
+      }
 
-        h2 {
-            font-style: italic;
-            color: grey;
-            font-size: 1.5em;
-        }
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
 
-        p {
-            color: #333;
-            font-size: 1em;
-        }
-
-        .contact-info h3 {
-            font-weight: bold;
-            font-style: italic;
-            font-size: 1.2em;
-        }
-
-        ul.contact-list {
-            background-color: #eeeeee;
-            padding: 10px;
-            border: 5px solid purple;
-            border-radius: 5px;
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        ul.contact-list li {
-            margin-bottom: 8px;
-        }
-
-        ul.contact-list a {
-            color: black;
-            text-decoration: none;
-        }
-
-        ul.contact-list a:hover {
-            color: green;
-        }
+      p {
+        background: #ffc125;
+        color: #5e2612;
+        padding: 10px;
+        visibility: hidden;
+      }
     </style>
   </head>
 
   <body>
-    <h1>Utsav Patel</h1>
-    <div class="job-title">Web Developer</div>
-    <p>
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language
-      ocean.
-    </p>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    
+    <p class="story"></p>
+  </body>
+</html><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
-    <p>
-      A small river named Duden flows by their place and supplies it with the
-      necessary regelialia. It is a paradisematic country, in which roasted
-      parts of sentences fly into your mouth.
-    </p>
+    <title>Silly story generator</title>
 
-    <h2>Contact information</h2>
-    <ul>
-      <li>
-        Email:
-        <a href="mailto:utsav@example.com">utsav@example.com</a>
-      </li>
-      <li>
-        Web:
-        <a href="https://example.com">https://example.com</a>
-      </li>
-      <li>Tel: 123 45678</li>
-    </ul>
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        width: 350px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      div {
+        padding-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+      p {
+        background: #ffc125;
+        color: #5e2612;
+        padding: 10px;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
   </body>
 </html>
