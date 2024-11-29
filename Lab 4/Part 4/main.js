@@ -11,3 +11,11 @@ let ball = {
     speedY: 4, // Speed of ball in Y direction
     color: 'red', // Ball color
   };
+  // Draw the ball on the canvas
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2); // Draw circle
+    ctx.fillStyle = ball.color; // Set color from the ball object
+    ctx.fill();
+    ctx.closePath();
+  }
