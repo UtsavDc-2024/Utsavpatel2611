@@ -19,3 +19,18 @@ function drawBall() {
     ctx.fill();
     ctx.closePath();
   }
+  // Update ball position and handle bouncing
+function updateBall() {
+    // Check for collision with walls and reverse direction if needed
+    if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+      ball.speedX = -ball.speedX; // Reverse direction in X
+    }
+    if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+      ball.speedY = -ball.speedY; // Reverse direction in Y
+    }
+  
+    // Update ball position
+    ball.x += ball.speedX;
+    ball.y += ball.speedY;
+  }
+  
