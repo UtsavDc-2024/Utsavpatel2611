@@ -33,4 +33,17 @@ function updateBall() {
     ball.x += ball.speedX;
     ball.y += ball.speedY;
   }
+  // Animation function
+function animateBall() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+    drawBall(); // Draw ball
+    updateBall(); // Update ball position
   
+    // Request next frame
+    requestAnimationFrame(animateBall);
+  }
+  
+  // Start animation when button is clicked
+  startButton.addEventListener('click', () => {
+    animateBall(); // Start the animation loop
+  });
