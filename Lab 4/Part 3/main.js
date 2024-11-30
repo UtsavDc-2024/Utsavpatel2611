@@ -24,4 +24,16 @@ const animal = {
       this.info = newInfo;
     }
   };
-    
+// Add event listener to update animal information on button click
+document.getElementById('update').addEventListener('click', function() {
+    // Update the animal object
+    animal.updateInfo(
+      "Tiger",
+      "Growl",
+      "Tigers are the largest cat species, known for their orange fur and black stripes."
+    );
+  
+    // Display the updated info
+    displayAnimalInfo();
+  });
+      
