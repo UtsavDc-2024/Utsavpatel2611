@@ -12,4 +12,16 @@ function displayAnimalInfo() {
   
   // Call the function to display initial info
   displayAnimalInfo();
+// Add a method to update animal information
+const animal = {
+    name: "Lion",
+    sound: "Roar",
+    info: "Lions are large carnivorous mammals that belong to the family of Felidae.",
   
+    updateInfo: function(newName, newSound, newInfo) {
+      this.name = newName;
+      this.sound = newSound;
+      this.info = newInfo;
+    }
+  };
+    
