@@ -3,3 +3,13 @@ const animal = {
     sound: "Roar",
     info: "Lions are large carnivorous mammals that belong to the family of Felidae."
   };
+  // Function to display animal information
+function displayAnimalInfo() {
+    document.getElementById('animal-name').textContent = `Name: ${animal.name}`;
+    document.getElementById('animal-sound').textContent = `Sound: ${animal.sound}`;
+    document.getElementById('animal-info').textContent = `Info: ${animal.info}`;
+  }
+  
+  // Call the function to display initial info
+  displayAnimalInfo();
+  
