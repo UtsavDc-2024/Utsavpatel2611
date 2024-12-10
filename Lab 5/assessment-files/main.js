@@ -1,47 +1,22 @@
-// functionality for showing/hiding the comments section
+/*
+  Name: Utsav Patel
+  Student ID: 100959365
+  Date: 10 December 2024
+  Description: JavaScript file for adding interactivity to the comments section.
+*/
 
-const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
+const showHideBtn = document.querySelector('.show-hide');
 
-commentWrapper.style.display = 'none';
-
-showHideBtn.onclick = function() {
+showHideBtn.onclick = function () {
   let showHideText = showHideBtn.textContent;
-  if(showHideText === 'Show comments') {
+  if (showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
     commentWrapper.style.display = 'block';
+    commentWrapper.setAttribute('aria-hidden', 'false');
   } else {
     showHideBtn.textContent = 'Show comments';
     commentWrapper.style.display = 'none';
+    commentWrapper.setAttribute('aria-hidden', 'true');
   }
 };
-
-// functionality for adding a new comment via the comments form
-
-const form = document.querySelector('.comment-form');
-const nameField = document.querySelector('#name');
-const commentField = document.querySelector('#comment');
-const list = document.querySelector('.comment-container');
-
-form.onsubmit = function(e) {
-  e.preventDefault();
-  submitComment();
-};
-
-function submitComment() {
-  const listItem = document.createElement('li');
-  const namePara = document.createElement('p');
-  const commentPara = document.createElement('p');
-  const nameValue = nameField.value;
-  const commentValue = commentField.value;
-
-  namePara.textContent = nameValue;
-  commentPara.textContent = commentValue;
-
-  list.appendChild(listItem);
-  listItem.appendChild(namePara);
-  listItem.appendChild(commentPara);
-
-  nameField.value = '';
-  commentField.value = '';
-}
