@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessibility assessment</title>
+  <title>Accessibility Assessment</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!--
@@ -14,14 +14,14 @@
   -->
 </head>
 <body>
-  <header class="header">
-    <h1>Welcome to our wildlife website</h1>
+  <header>
+    <h1>Welcome to our Wildlife Website</h1>
   </header>
 
   <div class="nav">
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Our team</a></li>
+      <li><a href="#">Our Team</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Blog</a></li>
     </ul>
@@ -33,19 +33,19 @@
 
   <main>
     <article>
-      <h2>The trouble with Bears</h2>
+      <h2>The Trouble with Bears</h2>
       <p>By Evan Wild</p>
       <p>
         Tall, lumbering, angry, dangerous. The real live bears of this world are proud...
       </p>
 
-      <h3>Types of bear</h3>
+      <h3>Types of Bear</h3>
       <table>
         <thead>
           <tr>
             <th scope="col">Bear Type</th>
             <th scope="col">Coat</th>
-            <th scope="col">Adult size</th>
+            <th scope="col">Adult Size</th>
             <th scope="col">Habitat</th>
             <th scope="col">Lifespan</th>
             <th scope="col">Diet</th>
@@ -63,13 +63,11 @@
         </tbody>
       </table>
 
-     
-
-      <h3>Habitats and Eating habits</h3>
+      <h3>Habitats and Eating Habits</h3>
       <img src="media/wild-bear.jpg" alt="A wild bear in its natural habitat">
       <img src="media/urban-bear.jpg" alt="An urban bear exploring a dumpster">
 
-      <h3>Mating rituals</h3>
+      <h3>Mating Rituals</h3>
       <audio controls>
         <source src="media/bear.mp3" type="audio/mp3">
         <source src="media/bear.ogg" type="audio/ogg">
@@ -79,7 +77,20 @@
       <section class="comments">
         <div class="show-hide">Show comments</div>
         <div class="comment-wrapper" aria-hidden="true">
-          
+          <h3>Add Comment</h3>
+          <form class="comment-form">
+            <div class="flex-pair">
+              <label for="name">Your Name:</label>
+              <input type="text" name="name" id="name" placeholder="Enter your name" aria-required="true">
+            </div>
+            <div class="flex-pair">
+              <label for="comment">Your Comment:</label>
+              <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-required="true">
+            </div>
+            <div>
+              <input type="submit" value="Submit Comment">
+            </div>
+          </form>
         </div>
       </section>
     </article>
